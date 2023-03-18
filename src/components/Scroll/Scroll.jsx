@@ -3,9 +3,8 @@ import React, { useCallback, useEffect, useState, useRef } from 'react'
 import './style.scss'
 
 export default function Scroll({
-  children, url,
+  children, url, limit = 20,
 }) {
-  const limit = 10
   const [maxPage, setMaxPage] = useState()
   const [data, setData] = useState([])
   const [page, setPage] = useState(1)

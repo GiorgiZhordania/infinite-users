@@ -13,7 +13,7 @@ export default function UserCard({
             </div>
             <h3>{`${prefix} ${name} ${lastName}`}</h3>
             <p>{title}</p>
-            <Link to={`/user/${id}`}>Open profile</Link>
+            <Link to={`/user?id=${id}`}>Open profile</Link>
         </article>
     )
 }

@@ -1,0 +1,41 @@
+.user-details {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+
+    .data {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid gray;
+
+        .cover {
+            width: 100%;
+            height: 200px;
+            position: relative;
+    
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    
+        h1 {
+            font-weight: bold;
+            margin: 10px 0;
+            font-size: 24px;
+        }
+    
+        .company {
+            margin-bottom: 5px;
+        }
+    }
+
+    .user-users-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+        background-color: rgb(224, 224, 224);
+    }
+}

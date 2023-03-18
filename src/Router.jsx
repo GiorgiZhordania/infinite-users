@@ -15,7 +15,7 @@ export default function Router() {
          element: <Home />,
        },
        {
-        path: '/user/:id',
+        path: '/user',
         element: <User />,
       },
      ]}

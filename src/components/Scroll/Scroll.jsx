@@ -5,12 +5,15 @@ import './style.scss'
 export default function Scroll({
   children, url, limit = 20,
 }) {
+  const [loading, setLoading] = useState(false)
   const [maxPage, setMaxPage] = useState()
   const [data, setData] = useState([])
   const [page, setPage] = useState(1)
   const ref = useRef()
 
   const fetchData = useCallback(() => {
+    setLoading(true)
+
     fetch(`${url}/${page}/${limit}`)
       .then((res) => res.json())
       .then((res) => {
@@ -22,6 +25,7 @@ export default function Scroll({
           return res.pagination.total / limit
         })
         setData(st => [...st, ...res.list])
+        setLoading(false)
       })
   }, [url, page])
 
@@ -64,6 +68,8 @@ export default function Scroll({
   return (
     <div ref={ref} className="scroll">
       {children(data)}
+
+      { loading && <div className='loader'>Loading</div> }
     </div>
   )
 }

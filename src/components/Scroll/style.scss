@@ -1,4 +1,15 @@
 .scroll {
     max-height: 100vh;
     overflow-y: auto;
+    position: relative;
+
+    .loader {
+        position: fixed;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%);
+        background-color: cadetblue;
+        padding: 20px;
+        border-radius: 5px;
+    }
 }

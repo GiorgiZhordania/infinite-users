@@ -35,7 +35,7 @@ export default function User() {
       </div>
       <Scroll
         limit={10}
-        url="http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user"
+        url={`http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${id}/friends`}
       >
         {
           (data) => (

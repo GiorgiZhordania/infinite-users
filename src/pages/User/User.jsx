@@ -32,7 +32,13 @@ export default function User() {
         <span className='contact'>
           {user.email}
         </span>
+        <br></br>
+        
       </div>
+      <h4 className='friends'>
+          Friends
+        </h4>
+
       <Scroll
         limit={10}
         url={`http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${id}/friends`}
